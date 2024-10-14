@@ -11,7 +11,6 @@ public class Main {
     }
     static void cadastro(){
 
-
         System.out.println("digite o nome do produto:");
         String nome = scanner.next();
         System.out.println("digite o preco do produto");
@@ -37,13 +36,18 @@ public class Main {
             System.out.println("Digite 2 para exibir a lista de produtos:");
             System.out.println("Digite 3 para sair do programa:");
             opcao = scanner.nextInt();
-            switch (opcao) {
-                case 1:
-                    cadastro();
-                    break;
-                case 2:
-                    exibir();
-                    break;
+            if (opcao>3) {
+                System.out.println("Opção invalida!!");
+            } else {
+                switch (opcao) {
+                    case 1:
+                        cadastro();
+                        break;
+                    case 2:
+                        exibir();
+                        break;
+                }
+
             }
         }
         System.out.println("SAINDO....");
